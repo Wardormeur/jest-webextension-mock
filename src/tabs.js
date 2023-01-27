@@ -46,7 +46,7 @@ export const tabs = {
     hasListener: jest.fn(),
   },
   sendMessage: jest.fn((tabId, message, cb) => {
-    onMessageListeners.forEach((listener) => listener(tabId, message));
+    onMessageListeners.forEach((listener) => listener(message));
     if (cb !== undefined) {
       return cb();
     }
